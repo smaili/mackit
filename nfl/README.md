@@ -1,3 +1,3 @@
-# MacKit
+# NFL
 
-Personal files and settings for MacOS.
+Bash script for batch downloading.

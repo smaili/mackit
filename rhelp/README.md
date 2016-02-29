@@ -1,3 +1,3 @@
-# MacKit
+# Rhelp
 
-Personal files and settings for MacOS.
+Bash helper for printing useful rails commands.

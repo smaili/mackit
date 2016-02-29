@@ -1,4 +1,24 @@
-# This file is used for helping remember rails commands.
+#
+#    /$$$$$$$  /$$                 /$$
+#   | $$__  $$| $$                | $$
+#   | $$  \ $$| $$$$$$$   /$$$$$$ | $$  /$$$$$$
+#   | $$$$$$$/| $$__  $$ /$$__  $$| $$ /$$__  $$
+#   | $$__  $$| $$  \ $$| $$$$$$$$| $$| $$  \ $$
+#   | $$  \ $$| $$  | $$| $$_____/| $$| $$  | $$
+#   | $$  | $$| $$  | $$|  $$$$$$$| $$| $$$$$$$/
+#   |__/  |__/|__/  |__/ \_______/|__/| $$____/
+#                                     | $$
+#                                     | $$
+#                                     |__/
+#
+#           Rhelp
+#
+#     This is the main bash file for helping remember rails commands.
+#
+#     Place this file in your home:
+#     /Users/michael/
+#
+
 
 print_red() {
     echo -e "\033[31m$1\033[0m"
