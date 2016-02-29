@@ -1,4 +1,4 @@
-# MacKit
-<img alt="MacKit logo" src="http://i.imgur.com/x3wotUI.png" title="MacKit"/>
+[![MacKit Logo](http://i.imgur.com/x3wotUI.png)](http://smaili.org/)
 
+# MacKit
 Personal files and settings for MacOS.
