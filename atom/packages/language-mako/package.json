@@ -1,0 +1,34 @@
+{
+  "name": "language-mako",
+  "version": "0.6.0",
+  "description": "Mako template plugin for Atom",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stevepaulo/language-mako.git"
+  },
+  "license": "MIT",
+  "engines": {
+    "atom": ">0.50.0"
+  },
+  "dependencies": {},
+  "readme": "# Mako template plugin\n\nA Mako template plugin for Atom. Converted from [mako-tmbundle](https://github.com/marconi/mako-tmbundle) by\n[marconi](https://github.com/marconi).\n\n",
+  "readmeFilename": "README.md",
+  "bugs": {
+    "url": "https://github.com/stevepaulo/language-mako/issues"
+  },
+  "homepage": "https://github.com/stevepaulo/language-mako#readme",
+  "_id": "language-mako@0.6.0",
+  "_shasum": "6366135cc7961d0470e646ee103d5a7f9b77dc2b",
+  "_resolved": "file:../d-115927-15810-19vv1aw/package.tgz",
+  "_from": "../d-115927-15810-19vv1aw/package.tgz",
+  "_atomModuleCache": {
+    "version": 1,
+    "dependencies": [],
+    "extensions": {
+      ".json": [
+        "package.json"
+      ]
+    },
+    "folders": []
+  }
+}

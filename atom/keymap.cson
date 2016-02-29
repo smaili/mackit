@@ -1,0 +1,28 @@
+#
+# Keymap
+# https://atom.io/docs/latest/behind-atom-keymaps-in-depth
+# https://github.com/atom/atom/blob/master/src/text-editor-element.coffee
+#
+
+'atom-workspace atom-text-editor:not([mini])':
+    # NAVIGATION
+    'ctrl-left': 'editor:move-to-beginning-of-word'
+    'ctrl-right': 'editor:move-to-beginning-of-next-word'
+    'ctrl-shift-left': 'editor:select-to-beginning-of-word'
+    'ctrl-shift-right': 'editor:select-to-beginning-of-next-word'
+    # TODO - https://github.com/atom/atom-keymap/issues/54
+    #'fn-left': 'editor:move-to-beginning-of-screen-line'
+    #'fn-right': 'editor:move-to-end-of-screen-line'
+
+    # SETTINGS
+    'cmd-shift-s': 'application:show-settings'
+
+    # NEW
+    'cmd-t': 'application:new-file'
+    'cmd-n': 'application:new-window'
+
+    # DEV TOOLS
+    'cmd-shift-d': 'window:toggle-dev-tools'
+
+    # FIND/REPLACE
+    'cmd-shift-r': 'find-and-replace:replace-next'

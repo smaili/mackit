@@ -1,0 +1,40 @@
+"*":
+  "bracket-matcher":
+    autocompleteBrackets: false
+    autocompleteSmartQuotes: false
+  core:
+    disabledPackages: [
+      "autocomplete-plus"
+      "wrap-guide"
+    ]
+    openEmptyEditorOnStart: false
+    themes: [
+      "one-dark-ui"
+      "solarized-dark-syntax"
+    ]
+  "custom-title":
+    template: "<% var path = require( 'path' ); var fmt = require( 'util' ).format; var file = { name: fileName, path: path.dirname( fileInProject ? relativeFilePath : filePath ), }; var maxtabs = 5; var tabcount = atom.workspace.getActivePane().getItems().length; var title = ( file.name === 'untitled' ) ? file.name : ( file.path === '.' ) ? file.name : ( tabcount <= maxtabs ) ? fmt( '%s/', file.path ) : fmt( '%s/%s', file.path, file.name ); %><%= title %>"
+  editor:
+    autoIndent: false
+    autoIndentOnPaste: false
+    invisibles: {}
+    scrollPastEnd: true
+    scrollSensitivity: 30
+    tabLength: 4
+  "exception-reporting":
+    userId: "ddaafd07-dffd-b252-48db-612909a97759"
+  "open-recent":
+    maxRecentDirectories: 5
+    maxRecentFiles: 15
+    replaceProjectOnOpenDirectory: true
+  "the-closer":
+    closeWindowTogetherWithLastTab: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  "vim-mode": {}
+  welcome:
+    showOnStartup: false
+  whitespace:
+    ensureSingleTrailingNewline: false
+    removeTrailingWhitespace: false

@@ -1,0 +1,220 @@
+/*
+ * Your Stylesheet
+ *
+ * This stylesheet is loaded when Atom starts up and is reloaded automatically
+ * when it is changed and saved.
+ *
+ * Add your own CSS or Less to fully customize Atom.
+ * If you are unfamiliar with Less, you can read more about it here:
+ * http://lesscss.org
+ */
+
+
+/*--------------------------------------------------
+Editor
+-------------------------------------------------- */
+atom-text-editor {
+    //color: white;
+    //background-color: hsl(180, 24%, 12%);
+}
+
+atom-text-editor::shadow .cursor {
+    //border-color: red;
+}
+
+
+/*--------------------------------------------------
+TREE VIEW
+-------------------------------------------------- */
+.tree-view {
+    //background-color: whitesmoke;
+}
+
+.tree-view::before {
+    background: none !important;
+}
+
+.tree-view .selected,
+.tree-view .selected > .list-item {
+    color: #99b2b8 !important;
+}
+
+.tree-view .selected::before {
+    background: none !important;
+}
+
+/*.tree-view .entries .entry:hover::before {
+    background: #003b4a !important;
+    height: 16px !important;
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.tree-view .entries .entry:hover > * {
+    position: relative;
+}*/
+
+// custom folder and file colors
+.tree-view .directory .icon::before {
+    color: #187fc8 !important;
+}
+
+.tree-view .file .icon::before {
+    color: #00ff8a !important;
+}
+
+// hide the folder carrot icons
+.list-tree.has-collapsable-children .list-nested-item > .list-item::before,
+.list-tree.has-collapsable-children .list-nested-item.collapsed > .list-item::before {
+    display: none !important;
+}
+
+// keep files aligned with folders
+.list-tree.has-collapsable-children li.list-item {
+    margin-left: 0;
+}
+
+
+
+// disable coloring modified files in git
+.list-group li:not(.list-nested-item).status-modified,
+.list-tree li:not(.list-nested-item).status-modified,
+.list-group li.list-nested-item.status-modified > .list-item,
+.list-tree li.list-nested-item.status-modified > .list-item {
+    color: #99b2b8 !important;
+}
+
+.tree-view .list-group li:not(.list-nested-item).selected.status-modified,
+.tree-view .list-tree li:not(.list-nested-item).selected.status-modified,
+.tree-view .list-group li.list-nested-item.selected.status-modified > .list-item,
+.tree-view .list-tree li.list-nested-item.selected.status-modified > .list-item {
+    /*color: #d5dfe2 !important;*/
+    color: #99b2b8 !important;
+}
+
+// disable coloring ignored and added files in git
+.list-group li:not(.list-nested-item).status-added,
+.list-tree li:not(.list-nested-item).status-added,
+.list-group li:not(.list-nested-item).status-ignored,
+.list-tree li:not(.list-nested-item).status-ignored,
+list-group li.list-nested-item.status-added > .list-item,
+.list-tree li.list-nested-item.status-added > .list-item,
+list-group li.list-nested-item.status-ignored > .list-item,
+.list-tree li.list-nested-item.status-ignored > .list-item {
+    color: #99b2b8 !important;
+}
+
+.list-group li:not(.list-nested-item).selected.status-added,
+.list-tree li:not(.list-nested-item).selected.status-added,
+.list-group li.list-nested-item.selected.status-added > .list-item,
+.list-tree li.list-nested-item.selected.status-added > .list-item {
+    /*color: #d5dfe2 !important;*/
+    color: #99b2b8 !important;
+}
+
+// compact view
+.tree-view {
+    font-size: 10px;
+
+    .list-item {
+        line-height: 18px !important;
+    }
+
+    .selected:before,
+    .selected:before {
+        height: 16px !important;
+    }
+
+    .icon:before {
+        font-size: 9px;
+        width: 8px;
+        height: 9px;
+        opacity: 0.6;
+        position: relative;
+        top: 0px;
+        margin-right: 5px !important;
+      }
+
+    .header:before {
+        font-size: 9px !important;
+        opacity: 0.6;
+    }
+}
+
+
+/*--------------------------------------------------
+VIM MODE
+-------------------------------------------------- */
+// blinking cursor
+atom-text-editor.vim-mode.normal-mode.is-focused,
+atom-text-editor.vim-mode.command-mode.is-focused,
+atom-text-editor.vim-mode.operator-pending-mode.is-focused,
+atom-text-editor.vim-mode.visual-mode.is-focused {
+    // shadow-DOM enabled/disabled
+    &::shadow, & {
+        // cursor
+        .cursor {
+            background-color: rgba( 255, 255, 255, .993 ) !important;
+        }
+        .blink-off .cursor {
+            visibility: hidden !important;
+        }
+
+        // bracket matcher
+        .bracket-matcher .region {
+            background-color: #7f8d90 !important;
+            border: 0;
+        }
+    }
+}
+
+// bracket matcher
+atom-text-editor::shadow .bracket-matcher .region {
+    background-color: #7f8d90 !important;
+    border: 0;
+}
+
+// normal/command-mode cursor
+// TODO - figure out why this isn't working
+atom-text-editor.vim-mode.normal-mode::shadow .editor-contents--private,
+atom-text-editor.vim-mode.command-mode::shadow .editor-contents--private {
+    cursor: default !important;
+}
+
+// search bar
+// TODO - figure out why this isn't working
+atom-text-editor.vim-mode .normal-mode-input .editor-container.search,
+atom-text-editor.vim-mode .command-mode-input .editor-container.search {
+}
+
+
+/*--------------------------------------------------
+GUTTER
+-------------------------------------------------- */
+// Disable all git diffs
+atom-text-editor::shadow .gutter .line-number.git-line-added,
+atom-text-editor::shadow .gutter .line-number.git-line-added:before,
+atom-text-editor::shadow .gutter .line-number.git-line-added:after,
+atom-text-editor::shadow .gutter .line-number.git-line-modified,
+atom-text-editor::shadow .gutter .line-number.git-line-modified:before,
+atom-text-editor::shadow .gutter .line-number.git-line-modified:after,
+atom-text-editor::shadow .gutter .line-number.git-line-removed,
+atom-text-editor::shadow .gutter .line-number.git-line-removed:before,
+atom-text-editor::shadow .gutter .line-number.git-line-removed:after {
+    border-left-width: 0 !important;
+}
+
+
+/*--------------------------------------------------
+SCROLLBARS
+-------------------------------------------------- */
+.scrollbars-visible-always atom-text-editor::shadow .vertical-scrollbar,
+.scrollbars-visible-always atom-text-editor::shadow .horizontal-scrollbar,
+.scrollbars-visible-always atom-text-editor:hover::shadow .vertical-scrollbar,
+.scrollbars-visible-always atom-text-editor:hover::shadow .horizontal-scrollbar {
+    opacity: 1 !important;
+    transform: none !important;
+    visibility: visible !important;
+}

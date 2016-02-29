@@ -1,0 +1,17 @@
+#
+# Menu
+# https://atom.io/docs/latest/hacking-atom-package-word-count
+#
+
+# CONTEXT MENU
+'context-menu':
+    'atom-workspace': [
+        {
+            label: 'Text'
+            submenu: [
+                # DEV TOOL
+                { label: 'Inspect Element', command: 'core:inspect' }
+            ]
+        }
+    ]
+
